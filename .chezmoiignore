@@ -1,0 +1,12 @@
+
+*.log
+*.ldb
+*/*.log
+*/*.ldb
+LOG
+**/rime/flypyzc.userdb/*
+**/rime/flypyzc.userdb/
+**/rime
+
+
+
