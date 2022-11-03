@@ -60,7 +60,7 @@ set_keymap("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { n
 -- set_keymap("n", "<leader>f", "<cmd>SymbolsOutline<cr>", { noremap = true })
 set_keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.treesitter{}<cr>", { noremap = true })
 -- Trouble
-set_keymap("n", "<leader>t", "<cmd>TroubleToggle<cr>", { noremap = true })
+set_keymap("n", "<leader>t", "<cmd>TroubleToggle<cr>", { silent=true, noremap = true })
 -- Copy
 set_keymap("n", "<C-c>", ':"+y<cr>', { noremap = true })
 set_keymap("v", "<C-c>", ':"+y<cr>', { noremap = true })

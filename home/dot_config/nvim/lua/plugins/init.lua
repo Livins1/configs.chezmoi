@@ -22,11 +22,15 @@ return require("packer").startup(function(use)
   -- Theme
   -- use 'EdenEast/nightfox.nvim'
   use("folke/tokyonight.nvim")
-
-  use({
-    "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
-  })
+  use("nvim-tree/nvim-web-devicons")
+  use(
+    "folke/trouble.nvim"
+  )
+  -- use ('feline-nvim/feline.nvim')
+  -- didn't work well with trouble.nvim
+  use(
+    "nvim-lualine/lualine.nvim"
+  )
 
   use({ 'mhartington/formatter.nvim' })
 
@@ -88,7 +92,7 @@ return require("packer").startup(function(use)
   -- use("simrat39/symbols-outline.nvim")
   --  Diagnostics
   use("folke/lsp-colors.nvim")
-  use("folke/lsp-trouble.nvim")
+  use("euclio/vim-markdown-composer")
   --
   --
   if packerBootstrap then

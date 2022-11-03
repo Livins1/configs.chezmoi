@@ -53,6 +53,8 @@ local config = {
     component_separators = '',
     section_separators = '',
     theme = 'tokyonight',
+    globalstatus = false,
+    always_divide_middle = false,
     --[[ theme = {
       -- We are going to use lualine_c an lualine_x as left and
       -- right section. Both are highlighted by c theme .  So we
@@ -233,3 +235,8 @@ ins_right({
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
+--
+--
+--
+--
+--
