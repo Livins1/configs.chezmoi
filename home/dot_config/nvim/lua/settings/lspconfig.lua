@@ -6,7 +6,6 @@ local api = vim.api
 
 local lspconfig = require("lspconfig")
 
--- local coq = require("coq")
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local function create_capabilities()
@@ -308,6 +307,9 @@ require("lspconfig").clangd.setup({
   on_attach = on_attach,
   capabilities = create_capabilities(),
 })
+
+-- Zig
+require'lspconfig'.zls.setup{}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = false,

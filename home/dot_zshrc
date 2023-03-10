@@ -14,6 +14,7 @@ export GOPROXY="https://proxy.golang.org,direct"
 export FZF_DEFAULT_COMMAND="fd --type file --follow"
 export FZF_CTRL_T_COMMAND="fd --type file --follow"
 export FZF_DEFAULT_OPTS="--height 20%"
+export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -22,7 +23,8 @@ export PATH="$HOME/.local/share/zig:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 # Lua
 export PATH="$HOME/lua/bin:$PATH"
-
+export PATH="$HOME/zig:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 
 setopt autocd              # change directory just by typing its name
@@ -300,6 +302,8 @@ fi
 # enable tmux auto start
 if [ "$TMUX" = "" ]; then tmux; fi
 
+
+eval "$(pyenv init -)"
 eval "$(zoxide init zsh)"
 # prompt pure
 
