@@ -33,7 +33,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
   buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
   -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+  -- buf_set_keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
   buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
   buf_set_keymap("n", "<space>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   buf_set_keymap("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
@@ -42,8 +42,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap("n", "<A-f>", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-  buf_set_keymap("i", "<A-f>", "<cmd>lua vim.lsp.buf.formatting()<CR><Esc>", opts)
+  buf_set_keymap("n", "<A-f>", "<cmd>lua vim.lsp.buf.formatting({async=true})<CR>", opts)
+  buf_set_keymap("i", "<A-f>", "<cmd>lua vim.lsp.buf.formatting({async=true})<CR><Esc>", opts)
 
   -- Get signatures (and _only_ signatures) when in argument lists.
   --[[ require "lsp_signature".on_attach({
@@ -206,7 +206,6 @@ lspconfig.volar_html.setup {}
     },
   },
 }) ]]
-
 -- Json
 -- npm i -g vscode-langservers-extracted
 lspconfig.jsonls.setup({
@@ -224,7 +223,6 @@ lspconfig.jsonls.setup({
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = create_capabilities(),
-
   settings = {
     documentFormatting = true,
     javascript = {
@@ -261,7 +259,7 @@ lspconfig.cssls.setup({
 })
 
 -- Lua
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   on_attach = on_attach,
   capabilities = create_capabilities(),
   --[[ commands = {
@@ -317,3 +315,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   signs = true,
   update_in_insert = false,
 })
+
+
+-- Julia
+-- julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
+--
+-- julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.update()'
+-- julia --project=/path/to/my/project -e 'using Pkg; Pkg.instantiate()'
+require 'lspconfig'.julials.setup {
+  on_attach = on_attach,
+  capabilities = create_capabilities(),
+
+}

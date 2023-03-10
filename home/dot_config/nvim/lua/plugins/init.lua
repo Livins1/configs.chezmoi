@@ -82,6 +82,7 @@ return require("packer").startup(function(use)
   })
 
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+
   use("lukas-reineke/indent-blankline.nvim")
 
   -- use 'beauwilliams/statusline.lua'

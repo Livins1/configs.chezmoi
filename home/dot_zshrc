@@ -17,7 +17,11 @@ export FZF_DEFAULT_OPTS="--height 20%"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+# zig
+export PATH="$HOME/.local/share/zig:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+# Lua
+export PATH="$HOME/lua/bin:$PATH"
 
 
 
