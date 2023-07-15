@@ -28,7 +28,6 @@ vim.o.wildmenu      = true
 vim.o.fillchars     = vim.o.fillchars .. 'vert:│'
 -- vim.o.list              = true
 -- vim.o.listchars         = 'tab:▸ ,trail:·,space:·'
-vim.o.lazyredraw    = true
 -- vim.o.re                = 0
 vim.o.synmaxcol     = 180
 vim.o.foldlevel     = 0
