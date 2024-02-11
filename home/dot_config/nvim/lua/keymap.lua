@@ -69,6 +69,3 @@ set_keymap("v", "<C-c>", ':"+y<cr>', { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>.", "<Plug>kommentary_line_default", {})
 vim.api.nvim_set_keymap("v", "<leader>.", "<Plug>kommentary_visual_default", {})
 
--- Format
-set_keymap("n", "<A-f>", "<cmd>Format<cr>", { noremap = true })
-set_keymap("i", "<A-f>", "<cmd>Format<cr><Esc>", { noremap = true })

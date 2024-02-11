@@ -27,6 +27,10 @@ export PATH="$HOME/lua/bin:$PATH"
 export PATH="$HOME/zig:$PATH"
 #Julia
 export PATH="$HOME/julia/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+
+#LuaLsp
+export PATH="$HOME/Ckits/LanguageServers/LuaLsp/bin:$PATH"
 
 
 setopt autocd              # change directory just by typing its name
