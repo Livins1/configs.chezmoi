@@ -67,4 +67,14 @@ lspconfig.lua_ls.setup {
   end
 }
 
+lspconfig.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  }
+}
+
 

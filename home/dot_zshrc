@@ -31,6 +31,8 @@ export PATH="$HOME/bin:$PATH"
 
 #LuaLsp
 export PATH="$HOME/Ckits/LanguageServers/LuaLsp/bin:$PATH"
+# Word
+export PATH="$HOME/Ckits/bin:$PATH"
 
 
 setopt autocd              # change directory just by typing its name

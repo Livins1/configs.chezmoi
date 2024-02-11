@@ -10,5 +10,7 @@ LOG
 
 **/packer_compiled.lua 
 
+**/*.log
+
 
 
