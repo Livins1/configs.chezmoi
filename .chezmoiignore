@@ -1,4 +1,5 @@
-
+**/log/
+**/log/**
 *.log
 *.ldb
 */*.log
@@ -8,9 +9,10 @@ LOG
 **/rime/flypyzc.userdb/
 **/rime
 
+
 **/packer_compiled.lua 
 
-**/*.log
+**/**.log
 
 
 
