@@ -3,6 +3,8 @@
 # fpath+=($HOME/.zsh/pure)
 
 # Env
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 export EDITOR=nvim
 export CARGO_INCREMENTAL=1
 export LESS="-F -X -R"
@@ -322,5 +324,7 @@ eval "$(zoxide init zsh)"
 
 path=('/home/serruht/.juliaup/bin' $path)
 export PATH
+
+source ~/.fonts/*.sh
 
 # <<< juliaup initialize <<<
